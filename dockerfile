@@ -47,7 +47,7 @@ RUN chown -R appuser:appuser /app
 # -------------------------------
 # Creating Data Directory
 # -------------------------------
-RUN mkdir data
+RUN mkdir /data
 
 # -------------------------------
 # Permissions for data directory
