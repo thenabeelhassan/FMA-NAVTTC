@@ -1,0 +1,351 @@
+{
+  "corvitkhi": {},
+  "corvitfai": {
+    "AWS": {
+      "1895321": {
+        "CNIC": "4310458610451",
+        "Name": "Muhammad Faizan"
+      },
+      "1897521": {
+        "CNIC": "4210149570685",
+        "Name": "Muhammad Affan Siddiqui"
+      },
+      "1900570": {
+        "CNIC": "4130357608031",
+        "Name": "Shuja Ahmed"
+      },
+      "1903027": {
+        "CNIC": "4210143234643",
+        "Name": "Syed Hamza Ahmed"
+      },
+      "1903758": {
+        "CNIC": "4250194568339",
+        "Name": "Ghulam Mujtaba Awan"
+      },
+      "1906355": {
+        "CNIC": "4240137924391",
+        "Name": "Qazi Mairaj Uddin"
+      },
+      "1906739": {
+        "CNIC": "4420614415979",
+        "Name": "Mola bukhsh"
+      },
+      "1907203": {
+        "CNIC": "4210177196235",
+        "Name": "Syed Khizar Hussain"
+      },
+      "1908162": {
+        "CNIC": "4250105284695",
+        "Name": "Shah Fahad"
+      },
+      "1908540": {
+        "CNIC": "4210184770285",
+        "Name": "Muhammad Danish Khan"
+      },
+      "1918768": {
+        "CNIC": "4210163862321",
+        "Name": "Muhammad Junaid Zia"
+      },
+      "1918934": {
+        "CNIC": "4210192955111",
+        "Name": "Abdul Karim Hasan"
+      },
+      "1924090": {
+        "CNIC": "4210161952277",
+        "Name": "Sami Faiz Qureshi"
+      },
+      "1924111": {
+        "CNIC": "4220132244293",
+        "Name": "Sirat E Mustaqueem Ahsan"
+      },
+      "1924127": {
+        "CNIC": "4540361273437",
+        "Name": "ROOH UL AMIN MEMON"
+      },
+      "1931684": {
+        "CNIC": "4550101086327",
+        "Name": "Ghulam Muhammad"
+      },
+      "1932805": {
+        "CNIC": "4210153487563",
+        "Name": "Muhammad Bilal"
+      },
+      "1940758": {
+        "CNIC": "4220148569787",
+        "Name": "Syed Saqib Ali"
+      },
+      "1941828": {
+        "CNIC": "4220180931433",
+        "Name": "Shawaiz Ahmed"
+      },
+      "1943587": {
+        "CNIC": "4210112897312",
+        "Name": "Mubashra Mukhtar"
+      }
+    },
+    "CEH": {
+      "1878391": {
+        "CNIC": "4210134174069",
+        "Name": "Muhammad Ashar"
+      },
+      "1878431": {
+        "CNIC": "4220185058433",
+        "Name": "Syed Ghulam Muhammad Bukhari"
+      },
+      "1893252": {
+        "CNIC": "1530271894449",
+        "Name": "Ahmad Said"
+      },
+      "1896566": {
+        "CNIC": "4540260825217",
+        "Name": "Ubaidullah"
+      },
+      "1897824": {
+        "CNIC": "4220152711809",
+        "Name": "Fahad Islam"
+      },
+      "1897835": {
+        "CNIC": "4220174515411",
+        "Name": "Muhammad Yasir"
+      },
+      "1898105": {
+        "CNIC": "4230120030055",
+        "Name": "Ali Abid"
+      },
+      "1900549": {
+        "CNIC": "4210135687497",
+        "Name": "Muhammad Zakir Habib"
+      },
+      "1900620": {
+        "CNIC": "4240173311503",
+        "Name": "Hafiz Shaikh Muhammad Hussain"
+      },
+      "1900652": {
+        "CNIC": "4210195733309",
+        "Name": "Yasir Sharif"
+      },
+      "1903361": {
+        "CNIC": "4130440017229",
+        "Name": "Sarosh Adil Siddiqui"
+      },
+      "1905968": {
+        "CNIC": "4230169782885",
+        "Name": "Muhammad Roshan Khan"
+      },
+      "1907004": {
+        "CNIC": "4220194722699",
+        "Name": "Abdul Waheed Khan"
+      },
+      "1910204": {
+        "CNIC": "4420387500313",
+        "Name": "Muhammad Juzlan"
+      },
+      "1910418": {
+        "CNIC": "4220130224667",
+        "Name": "Muhammad Sami Shaikh"
+      },
+      "1919004": {
+        "CNIC": "4240168991363",
+        "Name": "Ehsan Mustafa"
+      },
+      "1923760": {
+        "CNIC": "4250153817497",
+        "Name": "Ali Murtaza Bhutto"
+      },
+      "1931756": {
+        "CNIC": "4210194597857",
+        "Name": "shahzaib shoaib"
+      },
+      "1948684": {
+        "CNIC": "4120111472421",
+        "Name": "Mohsin Ali"
+      },
+      "1964970": {
+        "CNIC": "4220133109005",
+        "Name": "Uzair Khan"
+      },
+      "1874797": {
+        "CNIC": "4210197699319",
+        "Name": "Muhammad Hassan Lodhi"
+      },
+      "1876993": {
+        "CNIC": "3740524833657",
+        "Name": "Shehroze Asghar"
+      },
+      "1878500": {
+        "CNIC": "4210186381123",
+        "Name": "Fahad Iqbal"
+      },
+      "1878508": {
+        "CNIC": "4210150260239",
+        "Name": "Rahil Ahmed Siddiqui"
+      },
+      "1878530": {
+        "CNIC": "4220163777485",
+        "Name": "Asfand Yar"
+      },
+      "1878668": {
+        "CNIC": "4210175591901",
+        "Name": "Muhammad Bilal Rizvi Qadri"
+      },
+      "1896271": {
+        "CNIC": "4210177481143",
+        "Name": "Fawad Rashid"
+      },
+      "1897959": {
+        "CNIC": "4220122119205",
+        "Name": "Syed Sikander Hassan Naqvi"
+      },
+      "1898036": {
+        "CNIC": "4220162577915",
+        "Name": "Ali Haider"
+      },
+      "1900498": {
+        "CNIC": "4210176770979",
+        "Name": "Muhammad Owais Khan"
+      },
+      "1900528": {
+        "CNIC": "4410398043189",
+        "Name": "Huzair Khan"
+      },
+      "1900552": {
+        "CNIC": "4210175873439",
+        "Name": "Kayan Akmal"
+      },
+      "1901559": {
+        "CNIC": "4210120725608",
+        "Name": "Areeba Ali"
+      },
+      "1901698": {
+        "CNIC": "4220117943011",
+        "Name": "Kashan Ahmed"
+      },
+      "1902328": {
+        "CNIC": "4230158654023",
+        "Name": "Muhammad Rizwan Azhar"
+      },
+      "1902847": {
+        "CNIC": "4210189875591",
+        "Name": "Abdul Wahab Khan"
+      },
+      "1902995": {
+        "CNIC": "4210108216063",
+        "Name": "Syed Abdul Mohib"
+      },
+      "1903599": {
+        "CNIC": "4220180771571",
+        "Name": "Abdullah Bin Inam"
+      },
+      "1904251": {
+        "CNIC": "8250201060459",
+        "Name": "Haseeb Javed"
+      },
+      "1910507": {
+        "CNIC": "4210190365075",
+        "Name": "Muhammad Anas Khan"
+      },
+      "1915888": {
+        "CNIC": "4210121613545",
+        "Name": "shahzaib khan"
+      },
+      "1918176": {
+        "CNIC": "4210159897019",
+        "Name": "Mohtashim Hussain Siddiqui"
+      },
+      "1918325": {
+        "CNIC": "4210184603673",
+        "Name": "Zubair Ahmed"
+      },
+      "1926437": {
+        "CNIC": "4250147792679",
+        "Name": "Mumtaz Badar"
+      },
+      "1942314": {
+        "CNIC": "4220122365990",
+        "Name": "YOUMNA MALLICK"
+      }
+    },
+    "DFCS": {
+      "1874561": {
+        "CNIC": "4220118986807",
+        "Name": "Muhammad Siraj Muneer"
+      },
+      "1888766": {
+        "CNIC": "4220118658711",
+        "Name": "Muhammad Ghufran"
+      },
+      "1888794": {
+        "CNIC": "4210192064655",
+        "Name": "Syed Suhaib Ali Qazi"
+      },
+      "1888829": {
+        "CNIC": "4210162558369",
+        "Name": "Hassan raza"
+      },
+      "1888861": {
+        "CNIC": "4210106991229",
+        "Name": "Mazin Bin Iqbal Aziz"
+      },
+      "1896633": {
+        "CNIC": "4220191450407",
+        "Name": "Salman Zahid"
+      },
+      "1898053": {
+        "CNIC": "3120234726811",
+        "Name": "Syed Muhammad Hasham Zafar"
+      },
+      "1900398": {
+        "CNIC": "1730159291301",
+        "Name": "Fawad Nusrat"
+      },
+      "1900529": {
+        "CNIC": "4200045694223",
+        "Name": "Muhammad Hamza Khan"
+      },
+      "1901893": {
+        "CNIC": "4240128279796",
+        "Name": "Amna Siddique"
+      },
+      "1902905": {
+        "CNIC": "4210135068655",
+        "Name": "Bilal"
+      },
+      "1902915": {
+        "CNIC": "4220193734955",
+        "Name": "Syed Arsalan Jafar Abidi"
+      },
+      "1906217": {
+        "CNIC": "4220169803285",
+        "Name": "Abdul Rafay"
+      },
+      "1914262": {
+        "CNIC": "4130380295570",
+        "Name": "Saba Naeem"
+      },
+      "1932608": {
+        "CNIC": "4220154398147",
+        "Name": "Daniyal Ahmed Shah"
+      },
+      "1942187": {
+        "CNIC": "4210161047267",
+        "Name": "Badar ali mirza"
+      },
+      "1942581": {
+        "CNIC": "4220106171105",
+        "Name": "Muhammad Hassan"
+      },
+      "1942899": {
+        "CNIC": "4210108647025",
+        "Name": "fareed uddin siddiqui"
+      },
+      "1947440": {
+        "CNIC": "4200084750309",
+        "Name": "SIKANDER IQBAL"
+      },
+      "1957934": {
+        "CNIC": "4220123864479",
+        "Name": "Muhammad Shahzar Khan"
+      }
+    }
+  }
+}

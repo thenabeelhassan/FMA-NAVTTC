@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMA - File Management Application</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>
+      <a href="/"> FMA - File Management Application </a>
+    </h1>
+    <nav>
+      <a href="/">Home</a>
+      <% if (level1) { %> / <a href="/view/<%= level1 %>"><%= level1 %></a><% }
+      %> <% if (level2) { %> /
+      <a href="/view/<%= level1 %>/<%= level2 %>"><%= level2 %></a><% } %> <% if
+      (level3) { %> /
+      <a href="/view/<%= level1 %>/<%= level2 %>/<%= level3 %>"><%= level3 %></a
+      ><% } %> <% if (level4) { %> / <%= level4 %><% } %>
+    </nav>
+
+    <% if (!level4) { %>
+    <table border="1" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Folder Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% folders.forEach(f => { %>
+        <tr>
+          <td><%= f %></td>
+          <td>
+            <a
+              href="/view/<%= [level1, level2, level3, f].filter(Boolean).join('/') %>"
+              >View</a
+            >
+            |
+            <a
+              href="/download/folder/<%= [level1, level2, level3, f].filter(Boolean).join('/') %>"
+              >Download ZIP</a
+            >
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <% if (files.length > 0) { %>
+    <h2>Files</h2>
+    <table border="1" cellpadding="5">
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% files.forEach(file => { %>
+        <tr>
+          <td><%= file %></td>
+          <td>
+            <a
+              href="/download/file/<%= [level1, level2, level3, file].filter(Boolean).join('/') %>"
+              >Download</a
+            >
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <% } %> <% } else { %>
+    <!-- Level 4: preview files -->
+    <h2>File Previews</h2>
+    <div class="preview-container">
+      <% files.forEach(file => { const ext =
+      file.split('.').pop().toLowerCase(); %>
+      <div class="preview-card">
+        <p><strong><%= file %></strong></p>
+        <% if (['jpg','jpeg','png','gif','webp'].includes(ext)) { %>
+        <img
+          src="/uploads/<%= [level1, level2, level3, level4, file].join('/') %>"
+          alt="<%= file %>"
+        />
+        <% } else if (ext === 'pdf') { %>
+        <embed
+          src="/uploads/<%= [level1, level2, level3, level4, file].join('/') %>"
+          type="application/pdf"
+        />
+        <% } else { %>
+        <p>Cannot preview this file type</p>
+        <% } %>
+        <a
+          href="/download/file/<%= [level1, level2, level3, level4, file].join('/') %>"
+          >Download</a
+        >
+      </div>
+      <% }) %>
+    </div>
+    <% } %>
+    <div class="upload">
+      <a href="/upload" class="upload">Upload</a>
+    </div>
+  </body>
+</html>

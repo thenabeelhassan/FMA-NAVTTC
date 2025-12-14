@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMA - File Management Application</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>
+      <a href="/"> FMA - File Management Application </a>
+    </h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <select id="fileSelect" name="jsonFile">
+        <option value="">Select Course</option>
+        <% jsonFiles.forEach(file => { const nameOnly = file.replace(/\.json$/,
+        ''); %>
+        <option value="<%= nameOnly %>"><%= nameOnly %></option>
+        <% }) %>
+      </select>
+
+      <select id="parentSelect" name="parentKey">
+        <option value="">Select Institute</option>
+      </select>
+
+      <select id="childSelect" name="childKey">
+        <option value="">Select Select Course</option>
+      </select>
+
+      <select id="entrySelect" name="entryIndex">
+        <option value="">Select Student</option>
+      </select>
+      <input type="file" name="file" multiple required />
+
+      <div id="details">
+        <!-- Name & CNIC will appear here -->
+      </div>
+
+      <button type="submit">Upload</button>
+    </form>
+
+    <script>
+      const fileSelect = document.getElementById("fileSelect");
+      const parentSelect = document.getElementById("parentSelect");
+      const childSelect = document.getElementById("childSelect");
+      const entrySelect = document.getElementById("entrySelect");
+      const detailsDiv = document.getElementById("details");
+
+      // When file changes
+      fileSelect.addEventListener("change", async () => {
+        const fileName = fileSelect.value;
+        if (!fileName) return;
+
+        const res = await fetch(`/json-data?fileName=${fileName}`);
+        const data = await res.json();
+
+        // Populate parent dropdown
+        parentSelect.innerHTML = '<option value="">Select Parent</option>';
+        data.parentKeys.forEach((key) => {
+          const opt = document.createElement("option");
+          opt.value = key;
+          opt.textContent = key;
+          parentSelect.appendChild(opt);
+        });
+
+        // Reset downstream dropdowns
+        childSelect.innerHTML = '<option value="">Select Child</option>';
+        entrySelect.innerHTML = '<option value="">Select Name</option>';
+        detailsDiv.innerHTML = "";
+      });
+
+      // When parent changes
+      parentSelect.addEventListener("change", async () => {
+        const fileName = fileSelect.value;
+        const parentKey = parentSelect.value;
+        if (!fileName || !parentKey) return;
+
+        const res = await fetch(
+          `/json-data?fileName=${fileName}&parentKey=${parentKey}`
+        );
+        const data = await res.json();
+
+        // Populate child dropdown
+        childSelect.innerHTML = '<option value="">Select Child</option>';
+        data.childKeys.forEach((key) => {
+          const opt = document.createElement("option");
+          opt.value = key;
+          opt.textContent = key;
+          childSelect.appendChild(opt);
+        });
+
+        // Reset entries
+        entrySelect.innerHTML = '<option value="">Select Name</option>';
+        detailsDiv.innerHTML = "";
+      });
+
+      // When child changes
+      childSelect.addEventListener("change", async () => {
+        const fileName = fileSelect.value;
+        const parentKey = parentSelect.value;
+        const childKey = childSelect.value;
+        if (!fileName || !parentKey || !childKey) return;
+
+        const res = await fetch(
+          `/json-data?fileName=${fileName}&parentKey=${parentKey}&childKey=${childKey}`
+        );
+        const data = await res.json();
+
+        const sortedEntries = data.entries
+          .map((e, idx) => ({ ...e, _index: idx })) // preserve original index
+          .sort((a, b) => a.Name.localeCompare(b.Name));
+
+        entrySelect.innerHTML = '<option value="">Select Name</option>';
+
+        sortedEntries.forEach((e) => {
+          const opt = document.createElement("option");
+          opt.value = e._index; // IMPORTANT: original index for backend mapping
+          opt.textContent = e.Name;
+          entrySelect.appendChild(opt);
+        });
+
+
+        detailsDiv.innerHTML = "";
+      });
+
+      // When entry changes
+      entrySelect.addEventListener("change", () => {
+        const idx = entrySelect.value;
+        const fileName = fileSelect.value;
+        const parentKey = parentSelect.value;
+        const childKey = childSelect.value;
+        if (!idx) {
+          detailsDiv.innerHTML = "";
+          return;
+        }
+
+        fetch(
+          `/json-data?fileName=${fileName}&parentKey=${parentKey}&childKey=${childKey}`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const entry = data.entries[idx];
+            if (entry) {
+              detailsDiv.innerHTML = `Name: ${entry.Name}<br>CNIC: ${entry.CNIC}`;
+            } else {
+              detailsDiv.innerHTML = "";
+            }
+          });
+      });
+    </script>
+  </body>
+</html>

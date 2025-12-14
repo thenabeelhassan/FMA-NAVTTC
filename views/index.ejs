@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMA - File Management Application</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>
+      <a href="/"> FMA - File Management Application </a>
+    </h1>
+    <div class="upload">
+        <a href="/upload" class="upload">Upload</a>
+    </div>
+    <table border="1" cellpadding="5" class="homeTable">
+      <thead>
+        <tr>
+          <th>Folder Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% folders.forEach(folder => { %>
+        <tr>
+          <td><%= folder %></td>
+          <td>
+            <a href="/view/<%= folder %>">View</a> |
+            <a href="/download/folder/<%= folder %>">Download ZIP</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
